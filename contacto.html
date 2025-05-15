@@ -1,0 +1,49 @@
+<!-- contacto.html -->
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Musicality</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="img/musicality.png" alt="Logo" id="logo">
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="tienda.html">Tienda</a></li>
+          <li><a href="nosotros.html">Sobre Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="contacto-global">
+      <h1>Contacto</h1>
+      <fieldset class="formulario-caja">
+        <legend>Formulario de contacto</legend>
+        <form id="formulario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+  
+          <button type="submit">Enviar</button>
+        </form>
+      </fieldset>
+    </div>
+  </main>
+  <footer>
+    <p>© 2024 Musicality</p>
+  </footer>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
