@@ -34,7 +34,7 @@ header {
 
 }
 
-nav ul {
+.header-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -42,13 +42,13 @@ nav ul {
   gap: 1.5rem;
 }
 
-nav ul li a {
+.header-container  ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-#logo {
+.header-container #logo {
   height: 50px;
   animation: latido 3s ease-in-out infinite;
 }
@@ -315,4 +315,52 @@ form button {
 
 form button:hover {
   background-color: #003399;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: var(--color-acento);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sidebar #logo {
+  height: 60px;
+  margin-bottom: 2rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contenido {
+  margin-left: 240px; /* para dejar espacio al sidebar */
+  padding: 2rem;
 }
