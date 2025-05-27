@@ -7,8 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("email").value.trim();
       const mensaje = document.getElementById("mensaje").value.trim();
 
-      if (nombre.length < 2 || !email.includes("@") || mensaje.length < 2) {
-        alert("Por favor, completa correctamente todos los campos.");
+      // if (nombre.length < 2 || !email.includes("@") || mensaje.length < 2) {
+      //   alert("Por favor, completa correctamente todos los campos.");
+      //   e.preventDefault();
+      // }
+
+      if (nombre.length < 2) {
+        alert("El nombre debe tener al menos 2 caracteres.");
+        e.preventDefault();
+      } else if (!email.includes("@")) {
+        alert("Por favor, introduce un email válido.");
+        e.preventDefault();
+      } else if (mensaje.length < 2) {
+        alert("El mensaje debe tener al menos 2 caracteres.");
         e.preventDefault();
       }
     });
