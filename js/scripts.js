@@ -43,4 +43,30 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => tip.remove(), 2000);
     });
   });
+
+  document.querySelectorAll(".producto").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+      const nombre = el.querySelector("h2").textContent
+      const tip = document.createElement("div");
+      tip.textContent = `Producto: ${nombre}`;
+      tip.style.position = "absolute";
+      tip.style.background = "black";
+      tip.style.color = "white";
+      tip.style.padding = "5px";
+      tip.style.fontSize = "0.8rem";
+      tip.style.zIndex = 9999;
+      tip.style.top = `${el.getBoundingClientRect().top + 25}px`;
+      tip.style.left = `${el.getBoundingClientRect().left}px`;
+      tip.classList.add("tooltip-temp");
+      document.body.appendChild(tip);
+      setTimeout(() => tip.remove(), 2000);
+    });
+  });
 });
+
+// Ejemplo de querySelectorAll
+document.querySelectorAll(".producto");
+document.querySelectorAll("#logo");
+document.querySelectorAll("nav");
+document.querySelectorAll("nav ul li a");
+document.querySelectorAll(".producto h2");
